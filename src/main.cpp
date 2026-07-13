@@ -4,27 +4,30 @@
 using namespace std;
 
 int main() {
-    int scores[DEFAULT_SCORE_COUNT] = {25, 10, 30, 15, 40};
-    int target = 0;
+    const int SIZE = 5;
+    int scores[SIZE] = {25, 10, 30, 15, 40};
 
     cout << "Scoreboard Analyzer" << endl;
     cout << endl;
 
     cout << "Original scores:" << endl;
     printScores(scores, DEFAULT_SCORE_COUNT);
+    
     cout << endl;
 
-    cout << "Total: " << calculateTotal(scores, DEFAULT_SCORE_COUNT) << endl;
-    cout << "Average: " << calculateAverage(scores, DEFAULT_SCORE_COUNT) << endl;
-    cout << "Lowest: " << findLowest(scores, DEFAULT_SCORE_COUNT) << endl;
-    cout << "Highest: " << findHighest(scores, DEFAULT_SCORE_COUNT) << endl;
+    cout << "Total: " << calculateTotal(scores, SIZE) << endl;
+    cout << "Average: " << calculateAverage(scores, SIZE) << endl;
+    cout << "Lowest: " << findLowest(scores, SIZE) << endl;
+    cout << "Highest: " << findHighest(scores, SIZE) << endl;
+    
     cout << endl;
 
+    int target;
     cout << "Enter score to search for: ";
     cin >> target;
 
-    int index = findScore(scores, DEFAULT_SCORE_COUNT, target);
-
+    int index = findScore(scores, SIZE, target);
+    
     if (index == -1) {
         cout << "Score not found." << endl;
     } else {
@@ -32,10 +35,10 @@ int main() {
     }
 
     cout << endl;
-    sortScores(scores, DEFAULT_SCORE_COUNT);
+    sortScores(scores, SIZE);
 
     cout << "Sorted scores:" << endl;
-    printScores(scores, DEFAULT_SCORE_COUNT);
+    printScores(scores, SIZE);
 
     return 0;
 }
