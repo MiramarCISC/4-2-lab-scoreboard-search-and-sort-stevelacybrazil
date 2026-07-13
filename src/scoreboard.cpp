@@ -8,7 +8,7 @@ bool isValidSize(int size) {
 }
 
 int calculateTotal(const int scores[], int size) {
-    if (!isValidSize(size)) || scores == nullptr) {
+    if (!isValidSize(size) || scores == nullptr) {
         return 0;
     }
 
@@ -22,7 +22,7 @@ int calculateTotal(const int scores[], int size) {
 }
 
 double calculateAverage(const int scores[], int size) {
-    if (!isValidSize(size)) || scores == nullptr) {
+    if (!isValidSize(size) || scores == nullptr) {
         return 0.0;
     }
 
@@ -31,7 +31,7 @@ double calculateAverage(const int scores[], int size) {
 }
 
 int findLowest(const int scores[], int size) {
-    if (!isValidSize(size)) || scores == nullptr) {
+    if (!isValidSize(size) || scores == nullptr) {
         return 0;
     }
 
@@ -47,7 +47,7 @@ int findLowest(const int scores[], int size) {
 }
 
 int findHighest(const int scores[], int size) {
-   if (!isValidSize(size)) || scores == nullptr) {
+   if (!isValidSize(size) || scores == nullptr) {
         return 0;
     }
     
@@ -64,7 +64,7 @@ int findHighest(const int scores[], int size) {
 }
 
 int findScore(const int scores[], int size, int target) {
-    if (!isValidSize(size)) ||  scores == nullptr) {
+    if (!isValidSize(size) ||  scores == nullptr) {
         return -1;
     }
 
@@ -79,7 +79,7 @@ int findScore(const int scores[], int size, int target) {
 }
 
 void sortScores(int scores[], int size) {
- if (!isValidSize(size)) || scores == nullptr) {
+ if (!isValidSize(size) || scores == nullptr) {
         return;
     }
 
@@ -101,7 +101,7 @@ void sortScores(int scores[], int size) {
 }
 
 void printScores(const int scores[], int size) {
-    if (!isValidSize(size)) || scores == nullptr) {
+    if (!isValidSize(size) || scores == nullptr) {
         return;
     }
 
