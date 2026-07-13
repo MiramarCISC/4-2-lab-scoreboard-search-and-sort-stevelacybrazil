@@ -117,6 +117,5 @@ void printScores(const int scores[], int size) {
 }
 
 bool isValidSize(int size) {
-    // TODO: Return true when size is greater than 0.
-    return false;
+    return size > 0;
 }
