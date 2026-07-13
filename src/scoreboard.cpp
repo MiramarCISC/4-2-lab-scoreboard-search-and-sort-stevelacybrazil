@@ -115,7 +115,3 @@ void printScores(const int scores[], int size) {
 
     cout << endl;
 }
-
-bool isValidSize(int size) {
-    return size > 0;
-}
