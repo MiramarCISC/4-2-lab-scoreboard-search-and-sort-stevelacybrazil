@@ -14,6 +14,7 @@ int calculateTotal(const int scores[], int size) {
 
     int total = 0;
 
+    // Search for the target score and return its index. //peer review addition
     for (int i = 0; i < size; i++) {
         total += scores[i];
     }
@@ -47,7 +48,7 @@ int findLowest(const int scores[], int size) {
 }
 
 int findHighest(const int scores[], int size) {
-   if (!isValidSize(size) || scores == nullptr) {
+    if (!isValidSize(size) || scores == nullptr) {
         return 0;
     }
     
@@ -78,11 +79,12 @@ int findScore(const int scores[], int size, int target) {
 
 }
 
-void sortScores(int scores[], int size) {
- if (!isValidSize(size) || scores == nullptr) {
+void sortScores(int scores[], int size) { //peer review: Added a more consistent indentation of if ()
+    if (!isValidSize(size) || scores == nullptr) {
         return;
     }
 
+//Selection sort: find the smallest value and move it to the front. //peer review addition.
     for (int start = 0; start < size - 1; start++) {
         int minIndex = start;
 
